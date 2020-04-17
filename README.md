@@ -1,2 +1,2 @@
 # tp_laboratorio_1
-Álvarez Martín Andrés
+Álvarez, Martín Andrés
