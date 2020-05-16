@@ -227,7 +227,7 @@ int findEmployeeById(Employee *list, int len, int id) {
 	if (len > 1 && list != NULL) {
 
 		for (i = 0; i < len; i++) {
-			if (list[i].id == id) {
+			if ( list[i].id == id) {
 
 				retorno = i;
 			}
@@ -334,7 +334,7 @@ int sortEmployeesDescending(Employee *list, int len) {
 
 		for (i = 0; i < len - 1; i++) {
 			for (j = i + 1; j < len; j++) {
-				if (strcmp(list[i].lastName, list[j].lastName) > 0) {
+				if ((strcmp(list[i].lastName, list[j].lastName) > 0)) {
 					auxEmployee = list[i];
 					list[i] = list[j];
 					list[j] = auxEmployee;
@@ -419,9 +419,13 @@ int printEmployees(Employee *list, int length) {
 					"\n------------------------------------------------------------------------");
 
 	for (i = 0; i < length; i++) {
+		if(list[i].isEmpity==TRUE)
+		{
 
-		printf("\n|%4d | |%18s | |%20s | %8.2f | %4d  |", list[i].id,
-				list[i].lastName, list[i].name, list[i].salary, list[i].sector);
+			printf("\n|%4d | |%18s | |%20s | %8.2f | %4d  |", list[i].id,
+					list[i].lastName, list[i].name, list[i].salary, list[i].sector);
+		}
+
 	}
 	printf(
 			"\n------------------------------------------------------------------------");

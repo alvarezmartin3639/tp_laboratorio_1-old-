@@ -23,7 +23,6 @@ int main(void) {
 
 	Employee arrayEmployees[ELEMENTS];
 	int chosenOption;
-	int chosenOptionReport;
 	int id=ERROR;
 	int indexEmployee;
 	char name[50];
@@ -33,7 +32,7 @@ int main(void) {
 
 	initEmployees(arrayEmployees, ELEMENTS);
 
-	//harcodeoEmployee(arrayEmployees);
+	harcodeoEmployee(arrayEmployees);
 
 	do {
 		chosenOption = menuText();
